@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">下载</button>
+    <a id="downloadCsv"></a>
+</body>
+
+</html>
+<script>
+function formatMoney(num, decimal) {
+    let str = num.toFixed(decimal);
+    let flag = false, decimalStr = '';
+    if (str.indexOf('-') === 0) {
+        str = str.slice(1);
+        flag = true;
+    }
+    if (str.includes('.')) {
+        const index = str.indexOf('.');
+        decimalStr = str.slice(index);
+        console.log(decimalStr);
+        str = str.slice(0, index);
+        console.log(str);
+    }
+    let tmpStr='', res = '';
+    while(str.length>3){
+        tmpStr=","+str.slice(-3)+tmpStr;
+        str=str.slice(0,str.length-3);
+    }
+    if (flag) {
+        res = '-' + tmpStr + decimalStr;
+    } else {
+        res = tmpStr + decimalStr;
+    }
+    return res;
+}
+</script>
+<script>
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', function () {
+        let headers = ['时段', '2018-08-01', '2018-08-01', '2018-08-01'];
+        let dataSource = [
+            ['00时', 345, 65, 8],
+            ['06时', 23, 56, 89],
+            ['12时', 21, 4, 7],
+            ['18时', 67, 9, 34],
+        ];
+        let csv = '\uFEFF'; //
+        csv += headers.join(',') + '\r\n';
+        dataSource.forEach((record) => {
+            csv += (record.join(',') + '\r\n');
+            //如果是obj,就用Object.values()转为数组.
+        });
+        console.log('csv', csv);
+        const blob = new window.Blob([csv], {
+            type: 'text/csv,charset=UTF-8'
+        });
+        console.log('blob', blob);
+        const downloadCsv = document.getElementById('downloadCsv');
+        downloadCsv.href = window.URL.createObjectURL(blob); //将文件生成二进制进行路径的转换
+        downloadCsv.download = 'test.csv'; //指定导出文件的名字
+        console.log('window.URL.createObjectURL(blob)', window.URL.createObjectURL(blob));
+        downloadCsv.click();
+        window.URL.revokeObjectURL(blob);
+    })
+</script>
+<script>
+    /* original data */
+    var data = [{
+            "name": "John",
+            "city": "Seattle"
+        },
+        {
+            "name": "Mike",
+            "city": "Los Angeles"
+        },
+        {
+            "name": "Zach",
+            "city": "New York"
+        }
+    ];
+
+    /* make the worksheet */
+    var ws = XLSX.utils.json_to_sheet(data);
+
+    /* write workbook (use type 'binary') */
+    var csv = XLSX.utils.sheet_to_csv(ws);
+
+    /* generate a download */
+    function s2ab(s) {
+        var buf = new ArrayBuffer(s.length);
+        var view = new Uint8Array(buf);
+        for (var i = 0; i != s.length; ++i) view[i] = s.charCodeAt(i) & 0xFF;
+        return buf;
+    }
+
+    saveAs(new Blob([s2ab(csv)], {
+        type: "application/octet-stream"
+    }), "sheetjs.csv");
+</script>
