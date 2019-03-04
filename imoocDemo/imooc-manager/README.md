@@ -36,6 +36,10 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 配置的按需插件：https://ant.design/docs/react/introduce-cn
 定制主题配置： https://ant.design/docs/react/customize-theme-cn
 
+### 架构定义
+目前流行的框架进行开发，团队之间，友好的协议和规范是为了更好的约束和避免不良的代码的产生
+components：公共组件存放目录
+pages：个人所开发的页面
 
 
 ## Learn More
