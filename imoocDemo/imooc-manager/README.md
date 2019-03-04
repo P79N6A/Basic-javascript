@@ -32,8 +32,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 **种类** : react-router-dom axios less less-loader antD  babel-plugin-import
 
 ### webpack配置less-loader
-
-
+需要配置在424行的css配置后面才能成功，原因未知？待解决？
+配置的按需插件：https://ant.design/docs/react/introduce-cn
+定制主题配置： https://ant.design/docs/react/customize-theme-cn
 
 
 

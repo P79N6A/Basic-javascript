@@ -336,6 +336,10 @@ module.exports = function(webpackEnv) {
                 ),
                 
                 plugins: [
+                  ["import", {
+                    "libraryName": "antd",
+                    "style": true // `style: true` 会加载 less 文件
+                  }],
                   [
                     require.resolve('babel-plugin-named-asset-import'),
                     {
@@ -416,6 +420,48 @@ module.exports = function(webpackEnv) {
                 getLocalIdent: getCSSModuleLocalIdent,
               }),
             },
+            {
+              test: /\.less$/,
+              use: [
+                require.resolve('style-loader'),
+                {
+                  loader: require.resolve('css-loader'),
+                  options: {
+                    importLoaders: 1,
+                  },
+                },
+                {
+                  loader: require.resolve('postcss-loader'),
+                  options: {
+                    // Necessary for external CSS imports to work
+                    // https://github.com/facebookincubator/create-react-app/issues/2677
+                    ident: 'postcss',
+                    plugins: () => [
+                      require('postcss-flexbugs-fixes'),
+                      autoprefixer({
+                        browsers: [
+                          '>1%',
+                          'last 4 versions',
+                          'Firefox ESR',
+                          'not ie < 9', // React doesn't support IE8 anyway
+                        ],
+                        flexbox: 'no-2009',
+                      }),
+                    ],
+                  },
+                },
+                {
+                  loader:require.resolve('less-loader'),
+                  options: {
+                    javascriptEnabled: true, //less@^3会出现报错，添加后可以避免
+                    modules: false,
+                    modifyVars: {
+                        "@primary-color": "#f9c700",
+                    }
+                  }
+                }
+              ],
+            },
             // Opt-in support for SASS (using .scss or .sass extensions).
             // By default we support SASS Modules with the
             // extensions .module.scss or .module.sass
@@ -476,6 +522,7 @@ module.exports = function(webpackEnv) {
       ],
     },
     plugins: [
+      
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(
