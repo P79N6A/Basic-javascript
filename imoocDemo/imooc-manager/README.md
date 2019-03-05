@@ -47,6 +47,7 @@ components：公共组件存放目录
   |-- index.js / index.less
 pages：个人所开发的页面
 admin.js : 主页面
+config : 菜单的配置文件，变量的配置文件
 
 ## Learn More
 
