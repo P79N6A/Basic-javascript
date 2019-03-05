@@ -39,8 +39,14 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### 架构定义
 目前流行的框架进行开发，团队之间，友好的协议和规范是为了更好的约束和避免不良的代码的产生
 components：公共组件存放目录
+|-- Headers
+  |-- index.js / index.less
+|-- NavLeft
+  |-- index.js / index.less
+|-- Footer
+  |-- index.js / index.less
 pages：个人所开发的页面
-
+admin.js : 主页面
 
 ## Learn More
 
