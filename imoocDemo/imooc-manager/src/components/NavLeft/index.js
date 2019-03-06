@@ -22,7 +22,7 @@ export default class Headers extends Component {
         );
       } else {
         return (
-          <Menu.Item key={item.key} title={item.title}>
+          <Menu.Item key={item.key}>
             {item.title}
           </Menu.Item>
         );
