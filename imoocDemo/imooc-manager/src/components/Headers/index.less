@@ -1,0 +1,50 @@
+@import '../../style/default.less';
+
+.header {
+  .header-top {
+    padding: 0 20px;
+    height: 60px;
+    line-height: 60px;
+    text-align: right;
+    border-bottom: 1px solid #f9c700;
+    span {
+      padding-right: 20px;
+    }
+    a {
+      padding-right: 10px;
+    }
+  }
+
+  .breadcrumb {
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    .breadcrumb-title {
+      text-align: center;
+      font-size: 18px;
+      position: relative;
+      &::after {
+        position: absolute;
+        z-index: 1;
+        content: '';
+        top: 40px;
+        left: 72px;
+        border-top: 12px solid @colorM;
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+      }
+    }
+    .weather {
+      text-align: right;
+      vertical-align: middle;
+      span {
+        padding-right: 20px;
+      }
+      .weather-img {
+        img {
+          height: 18px;
+        }
+      }
+    }
+  }
+}

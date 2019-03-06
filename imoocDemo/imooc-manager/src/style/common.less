@@ -1,3 +1,5 @@
+@import './default.less';
+
 .container {
   .nav-left {
     height: calc(100vh);
@@ -5,9 +7,11 @@
   }
   .main {
     height: calc(100vh);
+    overflow: hidden;
     .content {
       position: relative;
       padding: 20px;
+      background-color: @colorL;
     }
   }
 }
