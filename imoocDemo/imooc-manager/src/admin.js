@@ -15,11 +15,11 @@ export default class Admin extends Component {
           <NavLeft />
         </Col>
         <Col span={21} className="main">
-          <Header />
+          <Header className="main-header" />
           <Row className="content">
             <Home />
           </Row>
-          <Footer />
+          <Footer className="main-footer" />
         </Col>
       </Row>
     );

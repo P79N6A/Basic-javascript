@@ -5,6 +5,7 @@ webpack配置整个项目
 calc属性的掌握，less预编译
 jsonp解决跨域问题，使用promise进行二次封装
 css语言
+react： children要点, 
 
 ### 页面架构
 布局为左右布局，右布局是上中下布局
@@ -32,3 +33,18 @@ https://www.html.cn/book/css/values/functional/calc().htm  有空看看！！！
 - 实现两个内容 1. 底部组件 2.中间的内容（暂时看成组件）
 - 利用default.less 定义less变量来控制颜色
 - css实现三角箭头
+
+
+### 路由知识学习 https://reacttraining.com/react-router/web/guides/quick-start
+- HashRouter 和 BrowserRouter
+- 路由是组件的思想
+- 核心api的使用 Router Route NavLink Link Switch Redirect ...
+- 路由的传参方式，以及路由的权限控制等
+
+**tips** 
+1. 一个路由标签下只能有一个子元素
+2. Switch 匹配第一个后就不往下匹配， exact 精确匹配 
+3. 路由匹配的特点：如果没有Switch/exact，当出现同名的情况或者一级路由相同的情况（'/' 和 '/about' 或者 '/about/ttt'），那就一直往下匹配具备条件的路由（可能出现覆盖的情况）
+4. 嵌套路由中，父路由不能使用精确匹配（会造成无法匹配到路由，原因？）
+5. 使用this.props.children来剥离router.js 进行路由文件的嵌套
+6. 动态路由获取参数和404路由的使用
