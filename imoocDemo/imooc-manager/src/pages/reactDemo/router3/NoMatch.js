@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 
-class App extends Component {
+export default class Home extends Component {
   render() {
     return (
       <div>
-        {this.props.children}
+        404 NoFound
       </div>
     );
   }
 }
-
-export default App;

@@ -43,8 +43,21 @@ https://www.html.cn/book/css/values/functional/calc().htm  有空看看！！！
 
 **tips** 
 1. 一个路由标签下只能有一个子元素
-2. Switch 匹配第一个后就不往下匹配， exact 精确匹配 
+2. Switch 匹配第一个后就不往下匹配， exact 精确匹配 Switch挺好用的哈
 3. 路由匹配的特点：如果没有Switch/exact，当出现同名的情况或者一级路由相同的情况（'/' 和 '/about' 或者 '/about/ttt'），那就一直往下匹配具备条件的路由（可能出现覆盖的情况）
 4. 嵌套路由中，父路由不能使用精确匹配（会造成无法匹配到路由，原因？）
 5. 使用this.props.children来剥离router.js 进行路由文件的嵌套
-6. 动态路由获取参数和404路由的使用
+6. 动态路由获取参数和404路由的使用 404的路由需要放在最后，匹配规则是从上到下，当没有时才会走到404
+**更多的知识点一定要去看文档，一定一定** 
+7. 项目的实战应用：确定了项目中有多个平级的页面的，只在中间的部分进行路由的跳转。因此，要考虑对于跳转路径的设计，应该为
+'/admin/...' , '/page/...'
+
+### antd 组件了解
+1. Button 了解api
+2. Modal 了解api， 使用 [type] 等es6语法
+3. Loading 了解api，使用Loading中嵌套其他组件
+4. Notification 了解api
+5. Message 了解api，
+6. Tabs组件 了解api，对于增删语法的逻辑进行理解
+7. Gallery组件 
+8. Carousel组件

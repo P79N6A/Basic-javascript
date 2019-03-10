@@ -1,5 +1,6 @@
 import React , { Component } from 'react';
 import { Menu, Icon} from 'antd';
+import { NavLink } from 'react-router-dom';
 import './index.less';
 import menuConfig from '../../config/menuConfig';
 
@@ -23,7 +24,9 @@ export default class Headers extends Component {
       } else {
         return (
           <Menu.Item key={item.key}>
-            {item.title}
+            <NavLink to={item.key}>
+              {item.title}
+            </NavLink>
           </Menu.Item>
         );
       }
