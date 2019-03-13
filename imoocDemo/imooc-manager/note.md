@@ -51,6 +51,7 @@ https://www.html.cn/book/css/values/functional/calc().htm  有空看看！！！
 **更多的知识点一定要去看文档，一定一定** 
 7. 项目的实战应用：确定了项目中有多个平级的页面的，只在中间的部分进行路由的跳转。因此，要考虑对于跳转路径的设计，应该为
 '/admin/...' , '/page/...'
+8. 再给router.js添加重定向的功能时，因为给'/'添加重定向到按钮页面时没有使用exact,导致每次刷新会在url后面重复添加redirect中to的值
 
 ### antd 组件了解
 1. Button 了解api

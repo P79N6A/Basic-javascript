@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <el-cascader v-model="val" placeholder="试试搜索：指南" :options="options" filterable @change="handleItemChange"></el-cascader>
+        <div v-for="i in vals">
+            label:{{i.label}} - value{{i.value}}
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script> 
+        // function getCascaderObj(val,opt) {
+        //     return val.map(function (value, index, array) {
+        //         for (var itm of opt) {
+        //             if (itm.value == value) { opt = itm.children; return itm; }
+        //         }
+        //         return null;
+        //     });
+        // }
+        const arr = [
+            { id: 1, name: '凉茶', },
+        ]
+    </script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                vals:[],
+                val: [],
+                options: [],
+            },
+            methods: {
+                // handleItemChange() {
+                //     this.vals=getCascaderObj(this.val, this.options);
+                // }
+
+            }
+        })
+    </script>
+</body> 
+</html>
