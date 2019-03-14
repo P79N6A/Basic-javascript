@@ -9,6 +9,9 @@ import Modals from './pages/ui/modals';
 import Loadings from './pages/ui/loading';
 import Notifications from './pages/ui/notification';
 import Messages from './pages/ui/messages';
+import TabsDemo from './pages/ui/tabs';
+import CarouselDemo from './pages/ui/carousel';
+import UploadDemo from './pages/ui/upload';
 export default class IRouter extends Component {
   render() {
     return (
@@ -27,6 +30,9 @@ export default class IRouter extends Component {
                   <Route path="/admin/ui/loadings" component={Loadings} />
                   <Route path="/admin/ui/notification" component={Notifications} />
                   <Route path="/admin/ui/messages" component={Messages} />
+                  <Route path="/admin/ui/tabs" component={TabsDemo} />
+                  <Route path="/admin/ui/carousel" component={CarouselDemo} />
+                  <Route path="/admin/ui/upload" component={UploadDemo} />
                   <Route component={NoMatch} />
                 </Switch>
               </Admin>

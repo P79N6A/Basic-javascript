@@ -38,6 +38,10 @@ export default [
       {
         title: '轮播图',
         key: '/admin/ui/carousel',
+      },
+      {
+        title: '上传',
+        key: '/admin/ui/upload',
       }
     ],
   },

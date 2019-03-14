@@ -59,6 +59,7 @@ https://www.html.cn/book/css/values/functional/calc().htm  有空看看！！！
 3. Loading 了解api，使用Loading中嵌套其他组件
 4. Notification 了解api
 5. Message 了解api，
-6. Tabs组件 了解api，对于增删语法的逻辑进行理解
-7. Gallery组件 
+6. Tabs组件 了解api，对于增删语法的逻辑进行理解 增和删会除非onEdit回调
+7. Gallery 画廊 利用Row，Col，Card实现
 8. Carousel组件
+9. 上传功能， 实现图片展示，转换base64，文本数据解析打印
