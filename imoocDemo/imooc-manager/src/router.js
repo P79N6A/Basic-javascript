@@ -12,6 +12,7 @@ import Messages from './pages/ui/messages';
 import TabsDemo from './pages/ui/tabs';
 import CarouselDemo from './pages/ui/carousel';
 import UploadDemo from './pages/ui/upload';
+import FormDemo from './pages/form/login';
 export default class IRouter extends Component {
   render() {
     return (
@@ -33,6 +34,7 @@ export default class IRouter extends Component {
                   <Route path="/admin/ui/tabs" component={TabsDemo} />
                   <Route path="/admin/ui/carousel" component={CarouselDemo} />
                   <Route path="/admin/ui/upload" component={UploadDemo} />
+                  <Route path="/admin/form/login" component={FormDemo} />
                   <Route component={NoMatch} />
                 </Switch>
               </Admin>
