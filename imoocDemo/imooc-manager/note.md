@@ -63,3 +63,16 @@ https://www.html.cn/book/css/values/functional/calc().htm  有空看看！！！
 7. Gallery 画廊 利用Row，Col，Card实现
 8. Carousel组件
 9. 上传功能， 实现图片展示，转换base64，文本数据解析打印
+10. 登录功能 Form组件 如何实现一个登录的组件对于Checkbox组件也要有一定的了解
+11. 注册功能 通过Form组件使用一个注册组件
+
+### 表格组件
+1. 基础表格 - 熟悉各种api, 比如column, dataSource, pagination, bordered
+2. 表格动态渲染 - mock数据 easy-mock mockjs
+
+### mockjs的使用
+1. import 引入可行 mock/index 需要在用的地方引入，考虑使用export default 或者直接引入即可
+2. 集中一个文件进行mock的配置 mock
+
+
+

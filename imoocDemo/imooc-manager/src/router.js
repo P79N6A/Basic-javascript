@@ -13,6 +13,8 @@ import TabsDemo from './pages/ui/tabs';
 import CarouselDemo from './pages/ui/carousel';
 import UploadDemo from './pages/ui/upload';
 import FormDemo from './pages/form/login';
+import Register from './pages/form/register';
+import BasicTable from './pages/table/basicTable';
 export default class IRouter extends Component {
   render() {
     return (
@@ -35,6 +37,8 @@ export default class IRouter extends Component {
                   <Route path="/admin/ui/carousel" component={CarouselDemo} />
                   <Route path="/admin/ui/upload" component={UploadDemo} />
                   <Route path="/admin/form/login" component={FormDemo} />
+                  <Route path="/admin/form/reg" component={Register} />
+                  <Route path="/admin/table/basic" component={BasicTable}/>
                   <Route component={NoMatch} />
                 </Switch>
               </Admin>
