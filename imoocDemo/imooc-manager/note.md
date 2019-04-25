@@ -69,10 +69,22 @@ https://www.html.cn/book/css/values/functional/calc().htm  有空看看！！！
 ### 表格组件
 1. 基础表格 - 熟悉各种api, 比如column, dataSource, pagination, bordered
 2. 表格动态渲染 - mock数据 easy-mock mockjs
+3. 单选框表格组件 rowSelection: 设置单/多选及其对应的方法; onRow行事件: 具体点击事件有return返回的对象决定
+selectedRowKeys这个设置与key/rowKey有关 : 这里我的rowKey是使用id从1开始, 所以对应的先使用方法中的index来需要加1处理,参考basicTable.js
+4. 多选框表格组件 熟悉onChange Api, 传的参数是数组key和行的数据对象
+5. 稍微高级点的表格组件 
+
 
 ### mockjs的使用
 1. import 引入可行 mock/index 需要在用的地方引入，考虑使用export default 或者直接引入即可
 2. 集中一个文件进行mock的配置 mock
+3. 后面改用easy mock https://easy-mock.com/project/5c9ddf5a3665d14747eedda6
 
+### 二次封装axios请求
+1. 使用Promise进行封装
+2. 使用class的静态属性来定义方法
 
-
+### tips
+关于使用函数进行事件传参的问题 (hightTable.js 参考操作的表格代码)
+eg: onClick={(item) => this.handle(item)} 视频上的代码是可以传过去的, 但是自己写的传不过去, 
+改: onClick={() => this.handle(item)}  ok

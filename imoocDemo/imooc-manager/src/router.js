@@ -15,6 +15,9 @@ import UploadDemo from './pages/ui/upload';
 import FormDemo from './pages/form/login';
 import Register from './pages/form/register';
 import BasicTable from './pages/table/basicTable';
+import HighTable from './pages/table/hightTable';
+//以下为测试用
+import AddAccount from './pages/ui/test/routes/addAccount';
 export default class IRouter extends Component {
   render() {
     return (
@@ -39,6 +42,8 @@ export default class IRouter extends Component {
                   <Route path="/admin/form/login" component={FormDemo} />
                   <Route path="/admin/form/reg" component={Register} />
                   <Route path="/admin/table/basic" component={BasicTable}/>
+                  <Route path="/admin/table/high" component={HighTable}/>
+                  <Route path="/admin/ui/test" component={AddAccount}/>
                   <Route component={NoMatch} />
                 </Switch>
               </Admin>

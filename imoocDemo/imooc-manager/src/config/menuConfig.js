@@ -42,6 +42,10 @@ export default [
       {
         title: '上传',
         key: '/admin/ui/upload',
+      },
+      {
+        title: '测试专用',
+        key: '/admin/ui/test',
       }
     ],
   },
